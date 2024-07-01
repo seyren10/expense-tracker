@@ -7,7 +7,7 @@
     ></CategoryItem>
 
     <CategoryAdd
-      class="flex cursor-pointer items-center gap-3 rounded-lg bg-indigo-100 text-indigo-500"
+      class="flex cursor-pointer items-center gap-3 rounded-lg bg-indigo-50 text-indigo-500"
     ></CategoryAdd>
   </ul>
 </template>

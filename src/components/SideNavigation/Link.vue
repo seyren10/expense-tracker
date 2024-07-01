@@ -9,7 +9,7 @@
     >
       <i :class="icon"></i>
     </div>
-    <span><slot /></span>
+    <span class="hidden pr-10 md:block"><slot /></span>
   </RouterLink>
 </template>
 

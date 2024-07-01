@@ -1,7 +1,7 @@
 <template>
-  <aside class="flex min-w-[15rem] flex-col rounded-xl bg-indigo-50 p-5">
+  <aside class="flex flex-col rounded-xl bg-indigo-50 p-5">
     <nav>
-      <ul class="grid gap-3 font-medium">
+      <ul class="grid gap-3">
         <li v-for="link in links">
           <Link
             :key="Link.name"
@@ -29,9 +29,13 @@ import Profile from "./Profile.vue";
 
 const links = [
   { icon: "pi pi-th-large", to: { name: "dashboard" }, name: "Dashboard" },
-  { icon: "pi pi-money-bill", to: { name: "expenses" }, name: "Expenses" },
+  { icon: "pi pi-shopping-cart", to: { name: "expenses" }, name: "Expenses" },
   { icon: "pi pi-credit-card", to: { name: "income" }, name: "Income" },
-  { icon: "pi pi-wallet", to: { name: "budget" }, name: "Budget" },
+  {
+    icon: "pi pi-wallet",
+    to: { name: "budget" },
+    name: "Budget",
+  },
 ];
 </script>
 

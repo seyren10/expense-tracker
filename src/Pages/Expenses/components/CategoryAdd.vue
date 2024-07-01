@@ -10,7 +10,7 @@
       @keydown.enter="handleAdd"
     />
     <i
-      :class="`pi ${getStateIcon} px-4 py-2 text-xs font-bold`"
+      :class="`pi ${getStateIcon} px-4 py-2 text-xs font-bold text-slate-500`"
       @click="handleAdd"
     ></i>
   </div>

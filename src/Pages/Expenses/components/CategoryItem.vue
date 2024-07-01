@@ -1,10 +1,10 @@
 <template>
-  <li class="flex items-center rounded-lg bg-indigo-100 pl-4 text-indigo-500">
+  <li class="flex items-center rounded-lg bg-indigo-50 pl-4">
     <span class="capitalize">
       {{ category }}
     </span>
     <i
-      class="pi pi-times cursor-pointer px-4 py-2 text-xs font-bold"
+      class="pi pi-times cursor-pointer px-4 py-2 text-xs font-bold text-slate-500"
       @click="handleDeleteCategory(category)"
     ></i>
   </li>
