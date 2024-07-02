@@ -1,6 +1,6 @@
 <template>
   <button
-    class="flex items-center gap-2 rounded-lg px-4 py-2 font-medium"
+    class="flex items-center gap-2 rounded-lg px-4 py-2 font-medium disabled:bg-slate-300 disabled:text-slate-500"
     :class="{
       'bg-indigo-500 text-white': variant === 'primary',
       'bg-indigo-100 text-indigo-500': variant === 'secondary',

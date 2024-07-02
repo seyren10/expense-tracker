@@ -1,6 +1,6 @@
 <template>
   <main class="space-y-10">
-    <h2 class="font-medium text-slate-500">Expenses</h2>
+    <h2 class="text-slate-500">Expenses</h2>
     <section class="ml-2">
       <h1 class="text-[1.2rem] font-bold">Categories</h1>
 
@@ -12,6 +12,8 @@
 
     <section class="ml-2">
       <h1 class="text-[1.2rem] font-bold">Expenses</h1>
+
+      <ExpenseForm class="mt-3"></ExpenseForm>
     </section>
   </main>
 </template>
@@ -21,6 +23,7 @@ import { useCategoryStore } from "@/stores/category";
 import { storeToRefs } from "pinia";
 
 import CategoryList from "./components/CategoryList.vue";
+import ExpenseForm from "./components/ExpenseForm.vue";
 
 const { categories } = storeToRefs(useCategoryStore());
 </script>

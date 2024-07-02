@@ -9,7 +9,7 @@
     >
       <i :class="icon"></i>
     </div>
-    <span class="hidden pr-10 md:block"><slot /></span>
+    <span class="hidden min-w-[min(10vw+1rem,10rem)] md:block"><slot /></span>
   </RouterLink>
 </template>
 
