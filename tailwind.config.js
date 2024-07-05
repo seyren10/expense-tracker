@@ -6,6 +6,9 @@ export default {
     container: {
       padding: "2rem",
     },
+    fontFamily: {
+      sans: ["Nunito", "sans-serif"],
+    },
   },
 
   plugins: [],
