@@ -13,7 +13,13 @@
     <section class="ml-2">
       <h1 class="text-[1.2rem] font-bold">Expenses</h1>
 
-      <ExpenseForm class="mt-3"></ExpenseForm>
+      <button-app @click="dialog = true" prepend-icon="pi pi-plus text-xs"
+        >Add expense</button-app
+      >
+
+      <Dialog v-model="dialog" persistent>
+        <ExpenseForm @close="dialog = false"></ExpenseForm>
+      </Dialog>
     </section>
   </main>
 </template>
@@ -24,8 +30,11 @@ import { storeToRefs } from "pinia";
 
 import CategoryList from "./components/CategoryList.vue";
 import ExpenseForm from "./components/ExpenseForm.vue";
+import Dialog from "@/components/Dialog/Dialog.vue";
 
 const { categories } = storeToRefs(useCategoryStore());
+
+const dialog = defineModel({ default: false });
 </script>
 
 <style scoped></style>

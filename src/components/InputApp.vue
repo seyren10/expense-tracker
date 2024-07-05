@@ -1,17 +1,17 @@
 <template>
-  <div class="grid gap-1">
-    <label :for="label" class="text-sm text-slate-500">{{ label }}</label>
+  <div class="grid">
+    <label :for="label" class="mb-1 text-sm text-slate-500">{{ label }}</label>
     <input
       v-focus:[focused]
       type="text"
       :id="label"
-      class="rounded-lg border px-4 py-2 outline-none"
+      class="rounded-lg border px-4 py-2 outline-none focus-visible:ring-1 focus-visible:ring-indigo-500"
       v-model="model"
       v-bind="$attrs"
       @blur="validate()"
     />
-    <div class="min-h-5 text-xs text-red-500" v-if="!isValid">
-      <span>
+    <div class="ml-1 min-h-5 text-xs text-red-500">
+      <span v-if="!isValid">
         {{ errorMessage }}
       </span>
     </div>

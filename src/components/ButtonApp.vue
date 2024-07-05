@@ -10,7 +10,7 @@
     <slot name="prepend">
       <i :class="prependIcon" v-if="prependIcon"></i>
     </slot>
-    <slot> Button </slot>
+    <slot> Button</slot>
     <slot name="append">
       <i :class="appendIcon" v-if="prependIcon"></i>
     </slot>
