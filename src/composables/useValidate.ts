@@ -14,7 +14,6 @@ export const useValidate = (
   const isValid = ref(true);
 
   function validate() {
-    console.log("qwe");
     if (Array.isArray(validationType))
       validationType.forEach((e) => {
         const [type, typeValue] = e.split(":");
