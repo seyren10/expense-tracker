@@ -5,7 +5,8 @@ export type ValidationType =
   | `max:${number}`
   | `maxLength:${number}`
   | `minLength:${number}`
-  | "required";
+  | "required"
+  | "date";
 
 export const useValidate = (
   value: Ref<string | number>,
@@ -41,6 +42,15 @@ export const useValidate = (
               isValid.value = value.value.trim() !== "";
             else if (typeof value.value === "number")
               isValid.value = value.value > 0;
+            break;
+          }
+          case "date": {
+            if (
+              typeof value.value === "string" &&
+              !Number.isNaN(Date.parse(value.value))
+            )
+              isValid.value = true;
+            else isValid.value = false;
             break;
           }
         }

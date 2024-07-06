@@ -1,6 +1,6 @@
 <template>
   <li class="flex items-center rounded-lg bg-indigo-50 pl-4">
-    <span class="capitalize">
+    <span class="font-bold capitalize">
       {{ category }}
     </span>
     <i

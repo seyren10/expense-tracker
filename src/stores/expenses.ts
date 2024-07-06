@@ -19,5 +19,14 @@ export const useExpensesStore = defineStore("expenses", () => {
     _expenses.value.push(expense);
   };
 
-  return { expenses, form, addExpense };
+  const resetForm = () => {
+    form.value = {
+      amount: 0,
+      category: categories.value[0] ?? "",
+      date: new Date().toISOString().split("T")[0],
+      title: "",
+    };
+  };
+
+  return { expenses, form, addExpense, resetForm };
 });

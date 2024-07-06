@@ -8,6 +8,7 @@ import router from "./router";
 
 import ButtonApp from "./components/ButtonApp.vue";
 import InputApp from "./components/InputApp.vue";
+import FormApp from "./components/FormApp.vue";
 
 import vFocus from "./directives/vFocus";
 
@@ -17,6 +18,7 @@ app.use(createPinia());
 app.use(router);
 app.component("button-app", ButtonApp);
 app.component("input-app", InputApp);
+app.component("form-app", FormApp);
 app.directive("focus", vFocus);
 
 app.mount("#app");
